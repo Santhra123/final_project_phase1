@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reg.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">  <img src="1.png" height="60px" width="60px"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sample.html">Sign In</a></li>
+                <li><a href="samplereg.html">Sign Up</a></li>                    
+               <li><a href="about.html">About Us</a></li>
+                <li><a href="samplecont.html">Contact Us</a></li>
+               
+            </ul>
+       
+     
+
+        </div> 
+    
+        <div class="wrapper">
+            <div class="title"><span>Sign Up Form</span></div>
+            <form action="#">
+        <div class="row1">
+            <label class="label_form1" >First name</label>
+            <label class="label_form2" >Last name</label><br>
+            </div>
+            <div class="row">
+            <input class="first" type="text" name="first_name"  placeholder="First name" required
+            minlength="3" maxlength="10" id="first_name" autocomplete="off" onfocusout="firstname_check(this)" >
+           
+           
+        
+            <input class="second" type="text" name="lname" placeholder="Last name" required
+            minlength="3" maxlength="10" id="last_name" autocomplete="off" onfocusout="lastname_check(this)" ><br>
+            
+            <span  id="fname"></span>
+          
+            <span  style=" position:absolute; left:675px"   id="lname"></span> 
+        
+        </div><br><br>
+        <div class="row1">
+            <label class="label_form1" >Date of birth</label>
+            <label class="label_form2" > Age</label><br>
+            </div>
+            <div class="row">
+            <input class="first" type="date" name="dbirth" id="date" placeholder="Date of birth" required max="" autocomplete="off"
+            onfocusout="calculate_age(this)">
+            
+            
+            <input class="second" type="text" name="age" id="age"  placeholder="Age" readonly>
+        
+            
+        </div><br><br>
+        <div class="row1">
+            <label class="label_form1" >Gender</label>
+            <label class="label_form2" >Phone number</label>
+            </div>
+        <div class="row">
+            
+            <input  class="radio-male" type="radio" id="male" name="gender" value="male" checked>
+            <label style="font-size:15px;" class="label-male" >Male:</label>
+            <input class="text-female"type="radio"id="male" name="gender" value="male">
+            <label style="font-size:15px;"class="label-emale" >Female:</label>
+            <input class="texr-other"type="radio"id="other" name="gender" value="other">
+            <label style="font-size:15px;" class="label-ther">Other:</label>
+            <!-- <select class="first" required>
+            <option value="" disabled selected>--Select gender--</option>
+                <option value="f1">Female</option>
+                <option value="f2">Male</option>
+                <option value="f3">Others</option>
+            </select> -->
+     
+            
+            <input style="margin-left:55px;" class="second" type="text" name="phone" minlength="10" maxlength="10" placeholder="Phone number" required
+            id="phone_number" autocomplete="off" onfocusout="phone_check(this)" ><br>
+            <span style=" position:absolute; left:675px" id="phone"></span>
+            
+           
+        </div><br><br>
+        <div class="row1">
+            <label class="label_form1" >Email address</label>
+            <label class="label_form2" >Address</label>
+            </div>
+        <div class="row">
+            
+            <input  class="first" type="text" name="email" placeholder="Email address" required
+            id="email_id" autocomplete="off" onfocusout="email_check(this)" >
+           
+
+        
+            <input class="second" type="text" name="address" placeholder="Address" required><br>
+            <span id="email"></span>
+        </div><br><br>
+        <div class="row1">
+            <label class="label_form1" >State</label>
+            <label class="label_form2" >City</label>
+            </div>
+        <div class="row">
+           
+            <select class="first" id="select-state" onfocusout="ChangeCityList()">
+                <option value=""  disabled selected>-- Select state --</option>
+                <option value="ker">Kerala</option>
+                <option value="goa">Goa</option>
+                <option value="kar">Karnataka</option>
+                <option value="tam">Tamilnadu</option>
+              </select>
+           
+            <select class="second" id="select-city" onfocusout="">
+            <option value=""  disabled selected>-- Select city --</option>
+               
+            </select>
+            
+        </div><br><br>
+        <div class="row1">
+            <label class="label_form1" >Username</label>
+            <label class="label_form2" >Password</label>
+            </div>
+        <div class="row">
+            
+            <input  class="first" type="text" name="p1" placeholder="Username" required
+            id="user_name" autocomplete="off" onfocusout="username_check(this)" >
+            
+           
+        
+            
+            <input  class="second" type="password" name="password" placeholder="Password" required
+            onfocusout="password_check(this)" id="password" ><br>
+            <span id="username"></span>
+            <span style=" position:absolute; left:675px" id="pass"></span>
+        </div><br><br>
+        <div class="row1">
+            <label class="label_form1" >Confirm password</label>
+           
+            </div>
+            <div class="row ">
+        
+            
+            <input class="first"  type="password" name="cpassword" placeholder=" Confirm password" required
+            onfocusout="cpassword_check(this)" id="cpassword" ><br>
+            <span id="cpass"></span>
+           
+        </div><br><br>
+       
+        <div class="row"> 
+        <input class="first  button" type="button" href="sample.html" name="button" value="Sign Up"><br><br>
+        </div>
+    </div>
+    <script src="register.js"  ></script>
+</body>
+    
+    <footer>
+    
+        <div class="footer-content">
+          <div class="footer-logo">
+            <!-- <img src="preview1.jpg" alt="Company Logo"> -->
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Services</a></li>
+              <li><a href="samplecont.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#"><img src="facebook-icon.png" height="40px" width="40px" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png"  height="40px" width="40px" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png"  height="40px" width="40px" alt="Instagram"></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Your Company. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        
+        </div>
+      </footer>
+      
